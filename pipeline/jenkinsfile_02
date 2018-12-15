@@ -1,0 +1,19 @@
+@Library('JenkinsLib')
+import helloworld
+
+pipeline {
+    agent any
+
+    stages {
+        stage('mycheckout') {
+            steps {
+                git 'https://github.com/cskarthik22/Algorithms.git'
+            }
+        }
+        stage('demo') {
+            steps {
+                helloworld()
+            }
+        }
+    }
+}
