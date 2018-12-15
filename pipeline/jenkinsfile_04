@@ -1,11 +1,5 @@
-@Library('JenkinsLib')
-import repeat_body
-
 pipeline {
     agent any
-    parameters {
-        string(name: 'mesg', defaultValue: 'Hello ', description: ' Provide some message...')
-    }
     stages {
         stage('demo_04') {
             steps {
