@@ -1,0 +1,16 @@
+@Library('JenkinsLib')
+import repeat_body
+
+pipeline {
+    agent any
+
+    stages {
+        stage('demo_03') {
+            steps {
+                repeat_body(5) {
+                    echo '!!! hello !!!'
+                }
+            }
+        }
+    }
+}
