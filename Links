@@ -1,2 +1,11 @@
 Jenkins Study Link
 https://www.linkedin.com/learning/jenkins-essential-training/continuous-integration-and-deployment
+
+Retrive Build Status via REST API
+curl -s --user jenkins:11cc763b1c18d64f1370ad00e36b239743 http://localhost:8080/job/DEV/job/Demo_05/lastBuild/api/json | python -mjson.tool
+
+http://localhost:8080/api/json?pretty=true
+http://localhost:8080/api/json?pretty=true&tree=jobs
+
+pip2 install --user jenkins-job-builder
+https://media.readthedocs.org/pdf/jenkins-job-builder/latest/jenkins-job-builder.pdf

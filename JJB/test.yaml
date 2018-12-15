@@ -1,0 +1,6 @@
+- job:
+    name: test_job
+    description: 'This job created using Jenkins Job Builder yaml file'
+    project-type: freestyle
+    builders:
+      - shell: 'ls'
