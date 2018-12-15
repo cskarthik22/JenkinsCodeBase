@@ -10,8 +10,8 @@ for (( i=0; i<N; i++ ))
 do 
    echo "$a"
    sleep 2
-   c = $(( a+b ))
-   a = $b
-   b = $c
+   c=$(( a+b ))
+   a=$b
+   b=$c
 done
 
