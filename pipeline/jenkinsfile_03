@@ -3,12 +3,21 @@ import repeat_body
 
 pipeline {
     agent any
-
+    parameters {
+        string(name: 'mesg', defaultValue: 'Hello !!!', description: ' Provide some message...')
+    }
     stages {
         stage('demo_03') {
             steps {
                 repeat_body(5) {
                     echo '!!! hello !!!'
+                }
+            }
+        }
+         stage('demo_03_params') {
+            steps {
+                repeat_body(5) {
+                    echo '${params.mesg}'
                 }
             }
         }
