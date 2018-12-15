@@ -1,0 +1,8 @@
+@Library('JenkinsLib')
+import helloworld
+
+stage('demo') {
+    steps {
+        helloworld()
+    }
+}
