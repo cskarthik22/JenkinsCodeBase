@@ -24,7 +24,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....!!'
-                kubectl cluster-info
+                sh '''
+                   kubectl cluster-info
+                
+                ''' 
             }
         }
     }
