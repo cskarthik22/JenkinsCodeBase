@@ -1,8 +1,29 @@
 @Library('JenkinsLib')
 import helloworld
 
-stage('demo') {
-    steps {
-        helloworld()
+pipeline {
+    agent any
+
+    stages {
+        stage('demo') {
+            steps {
+                helloworld()
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
