@@ -1,4 +1,4 @@
 @Library('JenkinsLib')
 import evenodd
 
-evenodd 3
+evenodd(currentBuild.getNumber())
