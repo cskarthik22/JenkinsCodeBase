@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('demo_04') {
             steps {
+
+                sh chmod 777 resources/fibonacci.sh
                 timeout(time: 1, unit: 'MINUTES') {
                     sh 'resources/fibonacci.sh 4'
                 }
