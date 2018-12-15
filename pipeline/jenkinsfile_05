@@ -1,17 +1,3 @@
 @Library('JenkinsLib')
-import log
 
-pipeline {
-    agent any
-    stages {
-        stage('testlog') {
-            steps {
-               echo 'Test groovy script custom log'
-               script {
-                  log.info '****CUSTOM LOG****'
-                  log.warning '****CUSTOM WARNING****'
-               }  
-            }
-        }
-    }
-}
+evenodd(currentBuild.getNumber())
