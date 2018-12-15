@@ -1,4 +1,5 @@
 @Library('JenkinsLib')
+import log
 
 pipeline {
     agent any
