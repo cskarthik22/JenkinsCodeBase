@@ -1,5 +1,6 @@
 @Library('JenkinsLib')
 import helloworld
+import repeat_helloworld
 
 pipeline {
     agent any
@@ -13,6 +14,11 @@ pipeline {
         stage('demo') {
             steps {
                 helloworld()
+            }
+        }
+        stage('demo_02') {
+            steps {
+                repeat_helloworld 3, 'Ha'
             }
         }
     }
