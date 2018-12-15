@@ -4,7 +4,10 @@ pipeline {
         stage('demo_04') {
             steps {
 
-                sh chmod 777 resources/fibonacci.sh
+                sh '''
+                    chmod 777 resources/fibonacci.sh
+                    ls -atr resources/fibonacci.sh
+                '''
                 timeout(time: 1, unit: 'MINUTES') {
                     sh 'resources/fibonacci.sh 4'
                 }
