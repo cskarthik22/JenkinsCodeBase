@@ -1,0 +1,23 @@
+@Library('JenkinsLib')
+import repeat_body
+
+pipeline {
+    agent any
+    parameters {
+        string(name: 'mesg', defaultValue: 'Hello ', description: ' Provide some message...')
+    }
+    stages {
+        stage('demo_04') {
+            steps {
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh 'resources/fibonacci.sh 4'
+                }
+
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh 'resources/fibonacci.sh 5'
+                }
+            }
+        }
+         
+    }
+}
