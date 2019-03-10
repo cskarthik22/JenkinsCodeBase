@@ -1,4 +1,4 @@
-def branchlist = ["/bin/bash", "-c", "git ls-remote --heads https://11aa46c64d2cf8fc91891634931b99f48e@github.com/cskarthik22/JenkinsCodeBase.git"].execute() | ["/bin/bash", "-c", "cut -f2"].execute()
+def branchlist = ["/bin/bash", "-c", "git ls-remote --heads https://<token>@github.com/<username>/JenkinsCodeBase.git"].execute() | ["/bin/bash", "-c", "cut -f2"].execute()
 branchlist.waitFor()
 
 return branchlist.in.text.readLines().collect { it.replaceAll('refs/heads/', '').replaceAll('refs/tags/', '').replaceAll("\\^\\{\\}", '') }
