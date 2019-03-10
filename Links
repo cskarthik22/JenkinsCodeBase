@@ -9,3 +9,6 @@ http://localhost:8080/api/json?pretty=true&tree=jobs
 
 pip2 install --user jenkins-job-builder
 https://media.readthedocs.org/pdf/jenkins-job-builder/latest/jenkins-job-builder.pdf
+
+Declarative Pipeline:
+https://dzone.com/articles/how-to-use-the-jenkins-declarative-pipeline
